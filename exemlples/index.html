@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    .invalid, .invalid:focus{
+      border: 3px solid red;
+    }
+    .valid, .valid:focus {
+      border: 3px solid green;
+    }
+    form + form {
+      margin-top: 16px;
+    }
+    .form__field + .form__field{
+      margin-top: 8px;
+    }
+  </style>
+
+  
+  <form action="/" class="form" id="form">
+    <div class="form__field">Email</div>
+    <div class="form__field">
+      <input type="text" class="input" id="email">
+      <div class="error__message" data-validate-type="error" data-field-id="email"></div>
+    </div>
+    <div class="form__field">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+  <form action="/" class="form" id="form1">
+    <div class="form__field">Min and Max length</div>
+    <div class="form__field">
+      <input type="text" class="input" id="minLength" placeholder="min 3">
+      <div class="error__message" data-validate-type="error" data-field-id="minLength"></div>
+    </div>
+    <div class="form__field">
+      <input type="text" class="input" id="maxLength" placeholder="max 6">
+      <div class="error__message" data-validate-type="error" data-field-id="maxLength"></div>
+    </div>
+    <div class="form__field">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+
+  <form action="/" class="form" id="form3">
+    <div class="form__field">Custom</div>
+    <div class="form__field">
+      <input type="text" class="input" id="custom" placeholder="hellod">
+      <div class="error__message" data-validate-type="error" data-field-id="custom"></div>
+    </div>
+    <div class="form__field">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+
+  <form action="/" class="form" id="form4">
+    <div class="form__field">Only numbers</div>
+    <div class="form__field">
+      <input type="text" class="input" id="numbers" placeholder="min 3">
+      <div class="error__message" data-validate-type="error" data-field-id="numbers"></div>
+    </div>
+    <div class="form__field">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+
+  <script src="../rm-validate.js"></script>
+  <script src="../exemlples/script.js"></script>
+</body>
+</html>
