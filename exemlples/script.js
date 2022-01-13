@@ -32,11 +32,11 @@ document.addEventListener('DOMContentLoaded', () => {
     validClass: 'valid',
     errorClass: 'invalid',
     rules: {
-      minLength: 6,
+      maxLength: 6,
       required: true,
     },
     errorMessage: {
-      minLength: 'max length 6',
+      maxLength: 'max length 6',
       required: 'invalid required'
     }
   })

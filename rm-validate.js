@@ -47,6 +47,17 @@ class RmValidate {
       return true;
     }
   }
+  _phone(field, length) {
+    const regexp = /\D/g;
+    const phone = field.value.replace(regexp, '');
+    if (typeof length === "number" && phone.length === length) {
+        return true;
+    }
+    if (length && typeof length === 'boolean' && phone.length === 11) {
+        return  true;
+    }
+    return  false;
+}
   _maxLength(field, length) {
     if (field.value.length > length) {
       return false;
